@@ -251,7 +251,7 @@ Fig. Visualization of hidden units (MaxIter:300, lambda:0.6)
 
 ## Course Links
 
-1) Machine Learning by Stanford University on [Coursera](https://www.coursera.org/learn/machine-learning)
+1) Machine Learning by Stanford University on [Coursera](https://www.coursera.org/learn/machine-learning/programming/Im1UC/regularized-linear-regression-and-bias-variance).
 
-2) [Neural Network Learning](https://www.coursera.org/learn/machine-learning/home/week/5) 
-(Please notice that you need to log in to see the programming assignment.)# ML-Neural_Networks_Learning-MATLAB
+2) [Regularized Linear Regression](https://www.coursera.org/learn/machine-learning/home/week/6)
+(Please notice that you need to log in to see the programming assignment.) #ML-Neural_Networks_Learning-MATLAB
