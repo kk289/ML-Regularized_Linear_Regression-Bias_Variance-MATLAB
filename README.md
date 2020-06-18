@@ -26,11 +26,28 @@ Machine Learning course from Stanford University on [Coursera](https://www.cours
 
 [⋆] validationCurve.m - Generates a cross validation curve
 
+### Part 1: Regularized Linear Regression
+We will implement regularized linear regression to predict the amount of water flowing out of a dam using the change of water level in a reservoir.
 
-### Part 1: Loading and Visualizing Data  
+#### Part 1.1: Loading and Visualizing Data  
+We will begin by visualizing the dataset containing historical records on the change in the water level, x, and the amount of water flowing out of the dam, y.
+
+This dataset is divided into three parts: 
+- A training set that your model will learn on: X, y  
+- A cross validation set for determining the regularization parameter: Xval, yval 
+- A test set for evaluating performance. These are “unseen” examples which your model did not see during training: Xtest, ytest  
+
+```
+% Load from ex5data1: 
+% You will have X, y, Xval, yval, Xtest, ytest in your environment
+load ('ex5data1.mat');
+```
+
+![plot](Figure/)
+- Figure: Dataset
 
 
-### Part 2: Regularized Linear Regression Cost  
+#### Part 1.2: Regularized Linear Regression Cost  
 
 
 ### Part 4: Train Linear Regression 
