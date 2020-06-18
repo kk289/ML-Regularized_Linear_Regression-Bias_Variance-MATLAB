@@ -10,13 +10,13 @@ Machine Learning course from Stanford University on [Coursera](https://www.cours
 - ex5data1.mat
 
 ### Files included in this repo
-- ex5.m - Octave/MATLAB script that steps you through the exercise 
+- ex5.m - Octave/MATLAB script that steps through the exercise 
 - ex5data1.mat - Dataset
-- submit.m - Submission script that sends your solutions to our servers 
+- submit.m - Submission script that sends solutions to our servers 
 - featureNormalize.m - Feature normalization function
 - fmincg.m - Function minimization routine (similar to fminunc) 
 - plotFit.m - Plot a polynomial fit
-- trainLinearReg.m - Trains linear regression using your cost function 
+- trainLinearReg.m - Trains linear regression using cost function 
 
 [⋆] linearRegCostFunction.m - Regularized linear regression cost function
 
