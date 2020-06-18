@@ -125,6 +125,7 @@ When you are computing the training set error, make sure we compute it on the tr
 ``` 
 %Generates a learning curve
 
+
 ```
 
 ![learningcurve](Figure/curve.jpg)
@@ -132,9 +133,41 @@ When you are computing the training set error, make sure we compute it on the tr
 
 We can observe that both the train error and cross validation error are high when the number of training examples is increased. This reflects a high bias problem in the model – the linear regression model is too simple and is unable to fit our dataset well.
 
+## Part 3: Polynomial regression
+
+Linear model was too simple for the data and resulted in underfitting (high bias). We now add more features, which is called as polynomial terms.
+
+For use polynomial regression, our hypothesis has the form:
+![polynomial](Figure/polynomial.png)
+
+By defining x1 =(waterLevel),x2 =(waterLevel)^2,...,xp = (waterLevel)^p, we obtain a linear regression model where the features are the various powers of the original value (waterLevel).
+
+We will add more features using the higher powers of the existing feature x in the dataset. polyFeatures.m function maps the original training set X of size m × 1 into its higher powers. Specifically, when a training set X of size m × 1 is passed into the function, the function should return a m×p matrix X poly, where column 1 holds the original values of X, column 2 holds the values of X.^2, column 3 holds the values of X.^3, and so on. Note that you don’t have to account for the zero-eth power in this function.  
+
+##### polyFeatures.m  
+```
+% Maps data into polynomial feature space
 
 
-### Part 2.2: Feature Mapping for Polynomial Regression 
+```
+
+### Part 3.1: Feature Mapping for Polynomial Regression 
+We will proceed to train polynomial regression using linear regression cost function.
+
+Note: we will be using a polynomial of degree 8. It turns out that if we run the training directly on the projected data, will not work well as the features would be badly scaled (e.g., an example with x = 40 will now have a feature x8 = 408 = 6.5 × 1012). Therefore, we will need to use feature normalization.
+
+![polynomial_0](Figure/polynomial_0.jpg)
+- Figure: Polynomial fit, λ = 0
+
+Here we find the polynomial able to fit the datapoints very well- thus, obtaining a low training error. However, the polynomial fit is very complex and even drops off at the extremes. This is an indicator that the polynomial regression model is overfitting the training data and will not generalize well.
+
+To better understand the problems with the unregularized (λ = 0) model, we can see that the learning curve (below) shows the same effect where the low training error is low, but the cross validation error is high. There is a gap between the training and cross validation errors, indicating a high variance problem.
+
+![polynomial_learning_curve](Figure/polynomialcurve.jpg)
+- Figure: Polynomial learning curve, λ = 0
+
+One way to combat the overfitting (high-variance) problem is to add regularization to the model.
+
 
 
 ### Part 7: Learning Curve for Polynomial Regression  
