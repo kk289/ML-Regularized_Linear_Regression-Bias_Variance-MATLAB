@@ -27,29 +27,28 @@ Machine Learning course from Stanford University on [Coursera](https://www.cours
 [⋆] validationCurve.m - Generates a cross validation curve
 
 
-## =========== Part 1: Loading and Visualizing Data =============
+### Part 1: Loading and Visualizing Data  
 
 
-## =========== Part 2: Regularized Linear Regression Cost =============
+### Part 2: Regularized Linear Regression Cost  
 
 
-
-## =========== Part 4: Train Linear Regression =============
-
-
-## =========== Part 5: Learning Curve for Linear Regression =============
+### Part 4: Train Linear Regression 
 
 
-## =========== Part 6: Feature Mapping for Polynomial Regression =============
+### Part 5: Learning Curve for Linear Regression  
 
 
-## =========== Part 7: Learning Curve for Polynomial Regression =============
+### Part 6: Feature Mapping for Polynomial Regression 
 
 
-## =========== Part 8: Validation for Selecting Lambda =============
+### Part 7: Learning Curve for Polynomial Regression  
 
 
-## Course Links
+### Part 8: Validation for Selecting Lambda 
+
+
+## Course Links 
 
 1) Machine Learning by Stanford University on [Coursera](https://www.coursera.org/learn/machine-learning/programming/Im1UC/regularized-linear-regression-and-bias-variance).
 
