@@ -16,6 +16,7 @@ Machine Learning course from Stanford University on [Coursera](https://www.cours
 - featureNormalize.m - Feature normalization function
 - fmincg.m - Function minimization routine (similar to fminunc) 
 - plotFit.m - Plot a polynomial fit
+- sigmoid.m - Sigmoid function
 - trainLinearReg.m - Trains linear regression using cost function 
 
 [⋆] linearRegCostFunction.m - Regularized linear regression cost function
