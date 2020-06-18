@@ -55,7 +55,8 @@ where λ is a regularization parameter which controls the degree of regularizati
 ##### linearRegCostFunction.m 
 ```
 % Regularized linear regression cost function
-
+h = sigmoid(X * theta);
+J = (1/2*m) * sum((log(h)-y).^2) + (lambda/(2 * m)) * sum(theta(2:end).^2);
 ```
 
 #### Part 1.3: Regularized linear regression gradient   
@@ -65,7 +66,7 @@ The partial derivative of regularized linear regression’s cost for θj is defi
 ##### linearRegCostFunction.m 
 ```
 % Regularized linear regression gradient function
-
+grad = (1/m * X' * (h - y)) + [0;(lambda/m) * theta(2:end)];
 ```
 
 #### Part 1.4: Fitting Linear Regression 
