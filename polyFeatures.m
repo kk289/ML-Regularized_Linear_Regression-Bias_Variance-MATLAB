@@ -12,14 +12,14 @@ X_poly = zeros(numel(X), p);
 % ====================== YOUR CODE HERE ======================
 % Instructions: Given a vector X, return a matrix X_poly where the p-th 
 %               column of X contains the values of X to the p-th power.
-%
-% 
 
+X = X_poly(:,1); % size m × 1
 
-
-
-
-
-% =========================================================================
+for i = 2:p
+    
+    % polynomial regression
+    X_poly(:,i) = X .* X_poly(:,i-1);
+    
+end
 
 end
