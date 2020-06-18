@@ -56,9 +56,11 @@ where λ is a regularization parameter which controls the degree of regularizati
 ##### linearRegCostFunction.m 
 ```
 % Regularized linear regression cost function
-h = sigmoid(X * theta);
-J = (1/2*m) * sum((log(h)-y).^2) + (lambda/(2 * m)) * sum(theta(2:end).^2);
+h = (X * theta);
+J = (1/(2*m)) * sum((h-y).^2) + (lambda/(2 * m)) * sum(theta(2:end).^2);
 ```
+
+Result: Cost at theta = [1 ; 1]: 303.993192 
 
 #### Part 1.3: Regularized linear regression gradient   
 The partial derivative of regularized linear regression’s cost for θj is defined as
@@ -69,6 +71,9 @@ The partial derivative of regularized linear regression’s cost for θj is defi
 % Regularized linear regression gradient function
 grad = (1/m * X' * (h - y)) + [0;(lambda/m) * theta(2:end)];
 ```
+
+Result: Gradient at theta = [1 ; 1]:  [-15.303016; 598.250744] 
+
 
 #### Part 1.4: Fitting Linear Regression 
 Once we get done with implementing cost and gradient function, we need to compute the optimal values of θ. *trainLinearReg.m*, this training function uses fmincg to optimize the cost function.
