@@ -143,18 +143,18 @@ Linear model was too simple for the data and resulted in underfitting (high bias
 For use polynomial regression, our hypothesis has the form:
 ![polynomial](Figure/polynomial.png)
 
-By defining x1 =(waterLevel),x2 =(waterLevel)^2,...,xp = (waterLevel)^p, we obtain a linear regression model where the features are the various powers of the original value (waterLevel).
+By defining x1 = (waterLevel),x2 =(waterLevel)^2,...,xp = (waterLevel)^p, we obtain a linear regression model where the features are the various powers of the original value (waterLevel).
 
 We will add more features using the higher powers of the existing feature x in the dataset. polyFeatures.m function maps the original training set X of size m × 1 into its higher powers. Specifically, when a training set X of size m × 1 is passed into the function, the function should return a m×p matrix X poly, where column 1 holds the original values of X, column 2 holds the values of X.^2, column 3 holds the values of X.^3, and so on. Note that you don’t have to account for the zero-eth power in this function.  
 
 ##### polyFeatures.m  
 ```
 % Maps data into polynomial feature space
-X = X_poly(:,1); % size m × 1
+X_poly(:,1) = X; % size m × 1
 
 for i = 2:p
     % polynomial regression
-    X_poly(:,i) = X .* X_poly(:,i-1);
+    X_poly(:,i) = X .* X_poly(:,(i-1));
 end
 ```
 
