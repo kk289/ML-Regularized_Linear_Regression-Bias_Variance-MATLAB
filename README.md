@@ -109,6 +109,29 @@ An important concept in machine learning is the bias-variance tradeoff. Models w
 We will plot training and test errors on a learning curve to diagnose bias-variance problems.
 
 ### Part 2.1: Learning Curve for Linear Regression  
+We will now implement code to generate the learning curves that will be useful in debugging learning algorithms. We fill in learningCurve.m so that it returns a vector of errors for the training set and cross validation set.
+
+To plot the learning curve, we need a training and cross validation set error for different training set sizes. To obtain different training set sizes, we should use different subsets of the original training set X. Specifically, for a training set size of i, we should use the first i examples (i.e., X(1:i,:) and y(1:i)).
+
+We use trainLinearReg function to find the θ parameters. Note that the lambda is passed as a parameter to the learningCurve function. After learning the θ parameters, we should compute the error on the train- ing and cross validation sets. 
+The training error for a dataset is defined as
+![error](Figure/error.png)  
+
+The training error does not include the regularization term. One way to compute the training error is to use your existing cost function and set λ to 0 only when using it to compute the training error and cross validation error.
+
+When you are computing the training set error, make sure we compute it on the training subset (i.e., X(1:n,:) and y(1:n)) (instead of the entire training set). However, for the cross validation error, we should compute it over the entire cross validation set. we should store the computed errors in the vectors error train and error val.
+
+##### learningCurve.m
+``` 
+%Generates a learning curve
+
+```
+
+![learningcurve](Figure/curve.jpg)
+- Figure: Linear Regression learning curve  
+
+We can observe that both the train error and cross validation error are high when the number of training examples is increased. This reflects a high bias problem in the model – the linear regression model is too simple and is unable to fit our dataset well.
+
 
 
 ### Part 2.2: Feature Mapping for Polynomial Regression 
