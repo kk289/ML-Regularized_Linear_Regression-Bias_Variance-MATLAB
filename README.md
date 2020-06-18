@@ -124,8 +124,11 @@ When you are computing the training set error, make sure we compute it on the tr
 ##### learningCurve.m
 ``` 
 %Generates a learning curve
-
-
+for i = 1:m
+    theta = trainLinearReg(X(1:i,:), y(1:i), lambda);
+    error_train(i) = linearRegCostFunction(X(1:i,:),y(1:i),theta, 0);
+    error_val(i) = linearRegCostFunction(Xval, yval, theta, 0);
+end
 ```
 
 ![learningcurve](Figure/curve.jpg)
@@ -147,8 +150,12 @@ We will add more features using the higher powers of the existing feature x in t
 ##### polyFeatures.m  
 ```
 % Maps data into polynomial feature space
+X = X_poly(:,1); % size m × 1
 
-
+for i = 2:p
+    % polynomial regression
+    X_poly(:,i) = X .* X_poly(:,i-1);
+end
 ```
 
 ### Part 3.1: Feature Mapping for Polynomial Regression 
