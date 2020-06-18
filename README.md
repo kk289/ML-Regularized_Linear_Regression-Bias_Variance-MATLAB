@@ -168,12 +168,55 @@ To better understand the problems with the unregularized (λ = 0) model, we can 
 
 One way to combat the overfitting (high-variance) problem is to add regularization to the model.
 
+### Part 3.2: Adjusting the regularization parameter
+We will get to observe how the regularization parameter affects the bias-variance of regularized polynomial regression. 
+
+We can modify the lambda parameter in the *ex5.m* and try λ = 1, 100. For each of these values, the script should generate a polynomial fit to the data and also a learning curve.
+
+For λ = 1, We should see a polynomial fit that follows the data trend well and a learning curve showing that both the cross validation and training error coverage to a relatively low value. This shows the λ = 1 regularized polynomial regression model does not have the high- bias or high-variance problems. In effect, it achieves a good trade-off between bias and variance.
 
 
-### Part 7: Learning Curve for Polynomial Regression  
+![polynomial_1](Figure/polynomial_1.jpg)
+- Figure: Polynomial fit, λ = 1
+
+![polynomial_learning_curve](Figure/polynomialcurve1.jpg)
+- Figure: Polynomial learning curve, λ = 1
+
+For λ = 100, we see a polynomial fit that does not follow the data well. In this case, there is too much regularization and the model is unable to fit the training data.
+
+![polynomial_100](Figure/polynomial_100.jpg)
+- Figure: Polynomial fit, λ = 100
+
+### Part 3.3: Selecting λ using a cross validation set
+
+Here, we implement an automated method to select the λ parameter.
+Concretely, we use a cross validation set to evaluate how good each λ value is. After selecting the best λ value using the cross validation set, we can then evaluate the model on the test set to estimate how well the model will perform on actual unseen data.
+
+##### validationCurve.m
+```
+% Generates a cross validation curve
 
 
-### Part 8: Validation for Selecting Lambda 
+```
+
+![validationcurve](Figure/validation.jpg)
+- Figure: Selecting λ using a cross validation set
+
+We can see that the best value of λ is around 3. Due to randomness in the training and validation splits of the dataset, the cross validation error can sometimes be lower than the training error.
+
+### Part 3.4: Computing test set error
+
+We implemented code to compute the cross validation error for various values of the regularization parameter λ. However, to get a better indication of the model’s performance in the real world, it is important to evaluate the “final” model on a test set that was not used in any part of training (that is, it was neither used to select the λ parameters, nor to learn the model parameters θ).
+
+In our cross validation, we obtained a test error of 3.8599 for λ = 3.
+
+
+### Part 3.5: Plotting learning curves with randomly selected examples
+
+Especially for small training sets, when we plot learning curves to debug your algorithms, it is often helpful to average across multiple sets of randomly selected examples to determine the training error and cross validation error.
+
+![randomselection](Figure/random.jpg)
+- Figure: Learning curve with randomly selected examples
 
 
 ## Course Links 
