@@ -7,27 +7,24 @@ Machine Learning course from Stanford University on [Coursera](https://www.cours
 - MATLAB 2018 b
 
 ### Dataset
-- ex4data1.mat
-- ex4weights.mat
+- ex5data1.mat
 
 ### Files included in this repo
-- ex4.m - Octave/MATLAB script that steps you through the exercise 
-- ex4data1.mat - Training set of hand-written digits
-- ex4weights.mat - Neural network parameters for exercise 4 
+- ex5.m - Octave/MATLAB script that steps you through the exercise 
+- ex5data1.mat - Dataset
 - submit.m - Submission script that sends your solutions to our servers 
-- displayData.m - Function to help visualize the dataset
+- featureNormalize.m - Feature normalization function
 - fmincg.m - Function minimization routine (similar to fminunc) 
-- sigmoid.m - Sigmoid function
-- computeNumericalGradient.m - Numerically compute gradients 
-- checkNNGradients.m - Function to help check your gradients 
-- debugInitializeWeights.m - Function for initializing weights 
-- predict.m - Neural network prediction function
+- plotFit.m - Plot a polynomial fit
+- trainLinearReg.m - Trains linear regression using your cost function 
 
-[⋆] sigmoidGradient.m - Compute the gradient of the sigmoid function 
+[⋆] linearRegCostFunction.m - Regularized linear regression cost function
 
-[⋆] randInitializeWeights.m - Randomly initialize weights
+[⋆] learningCurve.m - Generates a learning curve
 
-[⋆] nnCostFunction.m - Neural network cost function
+[⋆] polyFeatures.m - Maps data into polynomial feature space 
+
+[⋆] validationCurve.m - Generates a cross validation curve
 
 ## Part 1: Neural Networks
 In previous part, We implemented feedforward propagation for neural networks and used it to predict handwritten digits with the weights we provided. In this part, we will implement the *backpropagation algorithm* to learn the parameters for the neural network.
