@@ -43,7 +43,7 @@ This dataset is divided into three parts:
 load ('ex5data1.mat');
 ```
 
-![plot](Figure/)
+![plot](Figure/dataset.svg)
 - Figure: Dataset
 
 
