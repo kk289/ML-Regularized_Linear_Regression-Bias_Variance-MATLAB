@@ -48,6 +48,9 @@ load ('ex5data1.mat');
 
 
 #### Part 1.2: Regularized Linear Regression Cost  
+The regularized cost function for linear regression:  
+![plot](Figure/cost.png)  
+where λ is a regularization parameter which controls the degree of regularization (thus, help preventing overfitting). The regularization term puts a penalty on the overal cost J. As the magnitudes of the model parameters θj increase, the penalty increases as well.
 
 
 ### Part 4: Train Linear Regression 
