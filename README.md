@@ -52,8 +52,9 @@ The regularized cost function for linear regression:
 ![plot](Figure/cost.png)  
 where λ is a regularization parameter which controls the degree of regularization (thus, help preventing overfitting). The regularization term puts a penalty on the overal cost J. As the magnitudes of the model parameters θj increase, the penalty increases as well.
 
-##### linearRegCostFunction.m - Regularized linear regression cost function
+##### linearRegCostFunction.m 
 ```
+% Regularized linear regression cost function
 
 ```
 
@@ -61,14 +62,49 @@ where λ is a regularization parameter which controls the degree of regularizati
 The partial derivative of regularized linear regression’s cost for θj is defined as
 ![plot](Figure/gradient.png)  
 
+##### linearRegCostFunction.m 
+```
+% Regularized linear regression gradient function
 
-### Part 4: Train Linear Regression 
+```
+
+#### Part 1.4: Fitting Linear Regression 
+Once we get done with implementing cost and gradient function, we need to compute the optimal values of θ. *trainLinearReg.m*, this training function uses fmincg to optimize the cost function.
+
+##### trainLinearReg.m - Trains linear regression using cost function 
+```
+% Initialize Theta
+initial_theta = zeros(size(X, 2), 1); 
+
+% Create "short hand" for the cost function to be minimized
+costFunction = @(t) linearRegCostFunction(X, y, t, lambda);
+
+% Now, costFunction is a function that takes in only one argument
+options = optimset('MaxIter', 200, 'GradObj', 'on');
+
+% Minimize using fmincg
+theta = fmincg(costFunction, initial_theta, options);
+```
+
+We set regularization parameter λ to zero. Because our current implementation of linear regression is trying to fit a 2-dimensional θ, regularization will not be incredibly helpful for a θ of such low dimension.
+
+The best fit line tells us that the model is not a good fit to the data because the data has a non-linear pattern.
+
+![plot](Figure/linearfit.jpg) 
+- Fig. Linear Fit
+
+In the next section, we will implement a function to generate learning curves that can help debug our learning algorithm even if it is not easy to visualize the data.
 
 
-### Part 5: Learning Curve for Linear Regression  
+## Part 2: Bias-variance
+An important concept in machine learning is the bias-variance tradeoff. Models with high bias are not complex enough for the data and tend to underfit, while models with high variance overfit to the training data.
+
+We will plot training and test errors on a learning curve to diagnose bias-variance problems.
+
+### Part 2.1: Learning Curve for Linear Regression  
 
 
-### Part 6: Feature Mapping for Polynomial Regression 
+### Part 2.2: Feature Mapping for Polynomial Regression 
 
 
 ### Part 7: Learning Curve for Polynomial Regression  
