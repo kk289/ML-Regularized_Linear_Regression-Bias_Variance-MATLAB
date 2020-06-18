@@ -123,7 +123,7 @@ When you are computing the training set error, make sure we compute it on the tr
 
 ##### learningCurve.m
 ``` 
-%Generates a learning curve
+% Generates a learning curve
 for i = 1:m
     theta = trainLinearReg(X(1:i,:), y(1:i), lambda);
     error_train(i) = linearRegCostFunction(X(1:i,:),y(1:i),theta, 0);
