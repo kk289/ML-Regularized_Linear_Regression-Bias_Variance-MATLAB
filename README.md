@@ -191,8 +191,13 @@ For λ = 1, We should see a polynomial fit that follows the data trend well and 
 
 For λ = 100, we see a polynomial fit that does not follow the data well. In this case, there is too much regularization and the model is unable to fit the training data.
 
-![polynomial_100](Figure/polynomial_100.jpg)
+![polynomial_100](Figure/polynomialline.jpg)
 - Figure: Polynomial fit, λ = 100
+
+
+![polynomial_learning_curve](Figure/polynomial_100.jpg)
+- Figure: Polynomial learning curve, λ = 100
+
 
 ### Part 3.3: Selecting λ using a cross validation set
 
