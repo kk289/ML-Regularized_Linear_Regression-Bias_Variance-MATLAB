@@ -231,6 +231,9 @@ In our cross validation, we obtained a test error of 3.8599 for λ = 3.
 
 Especially for small training sets, when we plot learning curves to debug your algorithms, it is often helpful to average across multiple sets of randomly selected examples to determine the training error and cross validation error.
 
+![randomselection](Figure/random_curve.jpg)
+- Figure: Polynomial fit with randomly selected examples
+
 ![randomselection](Figure/random.jpg)
 - Figure: Learning curve with randomly selected examples
 
