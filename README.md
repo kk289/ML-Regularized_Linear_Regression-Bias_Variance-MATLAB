@@ -186,7 +186,7 @@ For λ = 1, We should see a polynomial fit that follows the data trend well and 
 ![polynomial_1](Figure/polynomial_1.jpg)
 - Figure: Polynomial fit, λ = 1
 
-![polynomial_learning_curve](Figure/polynomialcurve1.jpg)
+![polynomial_learning_curve](Figure/polynomialcurve11.jpg)
 - Figure: Polynomial learning curve, λ = 1
 
 For λ = 100, we see a polynomial fit that does not follow the data well. In this case, there is too much regularization and the model is unable to fit the training data.
