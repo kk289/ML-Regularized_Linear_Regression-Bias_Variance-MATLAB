@@ -243,4 +243,4 @@ Especially for small training sets, when we plot learning curves to debug your a
 1) Machine Learning by Stanford University on [Coursera](https://www.coursera.org/learn/machine-learning/programming/Im1UC/regularized-linear-regression-and-bias-variance).
 
 2) [Regularized Linear Regression](https://www.coursera.org/learn/machine-learning/home/week/6)
-(Please notice that you need to log in to see the programming assignment.) #ML-Neural_Networks_Learning-MATLAB
+(Please notice that you need to log in to see the programming assignment.) #ML-Regularized-Linear-Regression-Bias/Variance-MATLAB
