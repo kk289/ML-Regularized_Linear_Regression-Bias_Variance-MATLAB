@@ -106,6 +106,10 @@ In the next section, we will implement a function to generate learning curves th
 ## Part 2: Bias-variance
 An important concept in machine learning is the bias-variance tradeoff. Models with high bias are not complex enough for the data and tend to underfit, while models with high variance overfit to the training data.
 
+#### Diagnostic Bais vs Variance
+![DiagnosticBiasvsVariance](https://github.com/kk289/ML-Regularized_Linear_Regression-Bias_Variance-MATLAB/blob/master/Figure/DiagnosticBiasvsVariance.png) 
+
+
 We will plot training and test errors on a learning curve to diagnose bias-variance problems.
 
 ### Part 2.1: Learning Curve for Linear Regression  
